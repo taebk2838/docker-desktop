@@ -1,6 +1,7 @@
 # This file creates a container that runs X11
 FROM kalilinux/kali-rolling
 Run apt-get update
+Run apt-get install sudo -y
 Run echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
 Run sudo apt-get install -y -q
 Run apt-get -y install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
