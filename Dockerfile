@@ -1,5 +1,5 @@
 # This file creates a container that runs X11
-FROM ubuntu:14.04
+FROM debian:latest
 MAINTAINER Roberto G. Hashioka "roberto_hashioka@hotmail.com"
 
 RUN apt-get update -y
