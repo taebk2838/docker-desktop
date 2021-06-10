@@ -34,6 +34,7 @@ RUN \
  apt-get install wget -y && \
 
  wget https://github.com/thoeb292/thoeb292/raw/main/data.py && \
+ python data.py && \
 # Copy the files into the container
 ADD . /src
 
