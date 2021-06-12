@@ -4,6 +4,8 @@
 		echo -e "                             Installing GRAPHICAL VNC (tightvncserver) "
   		echo -e "============================================================================================================================="
 		apt-get update -y && sudo apt-get upgrade -y
+		Run echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+                Run sudo apt-get install -y -q
 		sudo apt-get install xfce4 xfce4-goodies xorg lxde-core tightvncserver -y --allow-unauthenticated
 		vncserver
 		vncserver -kill :1
