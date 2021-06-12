@@ -30,4 +30,3 @@
 		myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 		echo "Connect it!!! Using :-  ${myip}:1 in VNC Viewer."
     
-sleep 3383
